@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  /* background-image: url(/src/images/background.jpeg);
+  background-image: url(/src/images/background.jpeg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
   background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -78,19 +78,17 @@ header {
 
 /* Styles to Search Page */
 .search-container {
-  width: 40%;
+  width: 30%;
   padding-left: 20px;
+  padding-bottom: 90px;
 }
 
 .search-type-div {
   margin-top: 70px;
-  /* margin-bottom: 50px; */
 }
 
 .flex-display {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -160,6 +158,24 @@ header {
     rgba(255, 0, 255, 1) 100%
   );
   transform: scale(1.1);
+}
+
+.search-results {
+  width: 60%;
+  color: white;
+}
+
+.result-heading {
+  margin-left: 50px;
+}
+
+.result-info {
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  color: #625d5d;
+  text-align: center;
+  padding-top: 100px;
 }
 
 /* Styles to the Footer */
