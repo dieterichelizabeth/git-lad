@@ -23,6 +23,25 @@
   color: white;
 }
 
+.welcome {
+  min-height: 100vh;
+}
+
+.header-logo {
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.icon-credits {
+  text-align: right;
+  color: white;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
 .margin0 {
   margin: 0;
 }
