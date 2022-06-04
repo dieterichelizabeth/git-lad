@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  background-image: url(/src/images/background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +14,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.welcome {
+  min-height: 100vh;
+}
+
+.header-logo {
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.icon-credits {
+  text-align: right;
+  color: white;
+  font-size: 20px;
+  padding-right: 20px;
 }
