@@ -13,7 +13,9 @@ function Welcome() {
         <p className="margin0">
           Search for Repositories Issues or Commit History
         </p>
-        <button className="purpleToPink">Get Started</button>
+        <button className="purpleToPink">
+          <a href="/home"> Get Started </a>
+        </button>
       </header>
       <WelcomeFooter />
     </div>
