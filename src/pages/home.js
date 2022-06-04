@@ -1,38 +1,47 @@
-import React from "react";
-import Header from "../components/Header";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
+import Main from "../components/Main";
 
 function Home() {
+  // do not set a value of the currentPage variable on load
+  const [currentPage, SetCurrentPage] = useState(null);
+
+  // Nav Links
+  const navLinks = [
+    { name: "Search For Repository", href: "#search" },
+    { name: "View Commit History", href: "#commits" },
+  ];
+
+  const navHandler = (name) => SetCurrentPage(name);
+
   return (
     <div>
-      <Header />
-      <div className="info-text">
-        <p>Welcome to git-lad! Here you can search for repositories by</p>
-        <ul className="info-text-list">
-          <li>👾username</li>
-          <li>🛸language</li>
-          <li>💫repository name</li>
-        </ul>
-        <p>You can also view the commit history of a repository</p>
-        <p>
-          This project uses{" "}
-          <span>
-            <a
-              href="https://docs.github.com/en/rest"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              Github’s awesome Rest API!
-            </a>
-          </span>
-        </p>
-        <p>
-          To get started, Click on the “Search for Repository” option in the nav
-          bar to view open issues, or View Commit History to search for a repo
-          and it’s commits!
-        </p>
-      </div>
+      <header>
+        <a
+          href="https://github.com/dieterichelizabeth/GitLad"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-header"
+        >
+          Gitlad
+        </a>
+
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            onClick={() => {
+              navHandler(link.name);
+            }}
+            className={
+              currentPage === link.name ? "link-active" : "link-inactive"
+            }
+          >
+            {link.name}
+          </a>
+        ))}
+      </header>
+      <Main currentPage={currentPage} />
       <Footer />
     </div>
   );
