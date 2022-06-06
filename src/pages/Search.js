@@ -3,10 +3,13 @@ import SearchResults from "../components/SearchResults";
 import Nav from "../components/Nav";
 
 function SearchPage() {
+  // State for Username Input or Language Button clicks
+  // searchTerm state controls what is displayed on the "results" portion of the page
   const [formState, setFormState] = useState("");
   const [searchedRepos, setSearchedRepos] = useState("");
   const [searchTerm, setsearchTerm] = useState("");
 
+  // Attempt fetch to Github Api, if okay- update searchedRepos and searchTerm State
   const handleSearchTerm = (formState) => {
     let username = formState;
     let apiUrl = "https://api.github.com/users/" + username + "/repos";
@@ -29,6 +32,7 @@ function SearchPage() {
       });
   };
 
+  // Handle the Language Button Search
   const handleFeaturedSearch = (language) => {
     let apiUrl =
       "https://api.github.com/search/repositories?q=" +
@@ -52,6 +56,7 @@ function SearchPage() {
       });
   };
 
+  // Handle the Username Input Form Submit
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
@@ -62,11 +67,12 @@ function SearchPage() {
     handleSearchTerm(formState);
   };
 
+  // When a language button is clicked, pass the language to HandleFeaturedSearch
   const handleButtonClick = (searchTerm) => {
-    console.log(searchTerm);
     handleFeaturedSearch(searchTerm);
   };
 
+  // User Search form
   const userSearch = (
     <div className="search-type-div">
       <p className="search-heading">Search for Repositories by User</p>
@@ -87,6 +93,8 @@ function SearchPage() {
     </div>
   );
 
+  // All the language buttons...
+  // New language buttons can be added by duplicating the button and changing the innerHtml and handleButtonClick string to match
   const languageSearch = (
     <div className="search-type-div">
       <p className="search-heading">Search for Repositories by Topic</p>

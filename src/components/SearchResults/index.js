@@ -1,7 +1,6 @@
 import React from "react";
 
 function SearchResults({ results }) {
-  console.log(results);
   return (
     <div>
       {results &&
