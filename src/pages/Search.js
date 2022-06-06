@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import SearchResults from "../SearchResults";
+import SearchResults from "../components/SearchResults";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 function SearchPage() {
   const [formState, setFormState] = useState("");
   const [searchedRepos, setSearchedRepos] = useState("");
+  const [searchTerm, setsearchTerm] = useState("");
 
-  const handleSearchTearm = (formState) => {
+  const handleSearchTerm = (formState) => {
     let username = formState;
     let apiUrl = "https://api.github.com/users/" + username + "/repos";
 
@@ -14,6 +17,7 @@ function SearchPage() {
         if (res.ok) {
           res.json().then((json) => {
             setSearchedRepos(json);
+            setsearchTerm(username);
             setFormState("");
           });
         } else {
@@ -33,7 +37,7 @@ function SearchPage() {
       return false;
     }
 
-    handleSearchTearm(formState);
+    handleSearchTerm(formState);
   };
 
   const userSearch = (
@@ -90,34 +94,38 @@ function SearchPage() {
   // );
 
   return (
-    <div className="flex-display">
-      <div className="search-container">{userSearch}</div>
-      <div className="search-results">
-        <p className="result-heading">Results for:</p>
-        {searchedRepos ? (
-          <SearchResults results={searchedRepos} />
-        ) : (
-          <div className="result-info">
-            <p>
-              Repositories will populate here, you can view the open issues
-              count. Click on the repo name to see more information.
-            </p>
+    <>
+      <Nav />
+      <div className="flex-display">
+        <div className="search-container">{userSearch}</div>
+        <div className="search-results">
+          <p className="result-heading">Results for: {searchTerm}</p>
+          {searchedRepos ? (
+            <SearchResults results={searchedRepos} />
+          ) : (
+            <div className="result-info">
+              <p>
+                Repositories will populate here, you can view the open issues
+                count. Click on the repo name to see more information.
+              </p>
 
-            <p>
-              Click on one of the languages to the left to get started! Or enter
-              a username in the username search bar or repository name in the
-              repo search bar.{" "}
-            </p>
+              <p>
+                Click on one of the languages to the left to get started! Or
+                enter a username in the username search bar or repository name
+                in the repo search bar.{" "}
+              </p>
 
-            <p>
-              Repositories will populate here, you can view the open issues
-              count. Click on the repo name to see more information and to go
-              the repository itself on github!
-            </p>
-          </div>
-        )}
+              <p>
+                Repositories will populate here, you can view the open issues
+                count. Click on the repo name to see more information and to go
+                the repository itself on github!
+              </p>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

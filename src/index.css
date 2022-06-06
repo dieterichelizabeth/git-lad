@@ -216,7 +216,7 @@ header {
   height: 12px;
   color: #595959;
   font-family: "Courier New", Courier, monospace;
-  margin-top: 20px;
+  margin-top: 17px;
   margin-left: 10px;
   padding: 2px;
   margin-bottom: 5px;
@@ -251,4 +251,172 @@ header {
   font-weight: bold;
   color: #4285f4;
   margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 15px;
+  text-decoration: none;
+}
+
+.repoName:hover {
+  text-decoration: underline;
+}
+
+.red {
+  color: red;
+}
+
+/* Styles to Repository Search Single Repo Issues Results */
+.back-button {
+  color: #595959;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  background-color: transparent;
+  border: 1px solid #595959;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+  background-color: #c8bbf71c;
+}
+
+.issues-info-container {
+  text-align: center;
+}
+
+.issues-heading {
+  font-size: 20px;
+  color: white;
+  font-weight: 300;
+}
+
+.issues-repository-name {
+  color: #4285f4;
+}
+
+.issues-description {
+  color: #595959;
+  font-size: 12px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 0;
+}
+
+.issues-dates {
+  color: #cccccc;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 0;
+}
+
+.issues-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 84%;
+  margin: auto;
+}
+
+.issue-number {
+  color: #cccccc;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+hr {
+  border: 0.5px solid #595959;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.issueCards {
+  width: 45%;
+  margin: auto;
+  padding-left: 10px;
+  background-color: #c8bbf71c;
+  border-radius: 10px;
+  border: 1px solid #595959;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.issueName {
+  font-size: 12px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  padding-top: 17px;
+}
+
+.issueName:hover {
+  color: #4285f4;
+}
+
+.issue-card-date {
+  color: #595959;
+  font-size: 12px;
+  font-family: "Courier New", Courier, monospace;
+  width: 90%;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.issue-card-button {
+  color: white;
+  font-size: 15px;
+  background: rgb(60, 120, 216);
+  background: linear-gradient(
+    135deg,
+    rgba(60, 120, 216, 0.926500822368421) 0%,
+    rgba(103, 78, 167, 1) 100%
+  );
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  padding: 5px;
+  height: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.issue-card-button:hover {
+  background: rgb(60, 120, 216);
+  background: linear-gradient(
+    135deg,
+    rgba(103, 78, 167, 1) 0%,
+    rgba(60, 120, 216, 0.926500822368421) 100%
+  );
+  transform: scale(1.1);
+}
+
+.pullRequest-card-button {
+  font-size: 10px;
+  background: rgb(255, 0, 255);
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 255, 1) 0%,
+    rgba(142, 124, 195, 1) 100%
+  );
+  border: none;
+  border-radius: 5px;
+  width: 55px;
+  height: 30px;
+  margin-top: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pullRequest-card-button:hover {
+  background: rgb(255, 0, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(142, 124, 195, 1) 0%,
+    rgba(255, 0, 255, 1) 100%
+  );
+  transform: scale(1.1);
 }
