@@ -1,24 +1,21 @@
 import React from "react";
 
-function SearchResults() {
+function SearchResults({ results }) {
+  console.log(results);
   return (
-    <div className="result-info">
-      <p>
-        Repositories will populate here, you can view the open issues count.
-        Click on the repo name to see more information.
-      </p>
-
-      <p>
-        Click on one of the languages to the left to get started! Or enter a
-        username in the username search bar or repository name in the repo
-        search bar.{" "}
-      </p>
-
-      <p>
-        Repositories will populate here, you can view the open issues count.
-        Click on the repo name to see more information and to go the repository
-        itself on github!
-      </p>
+    <div>
+      {results &&
+        results.map((repo) => (
+          <div className="repoCards">
+            <div className="repoInfo">
+              <p className="repoName">{repo.full_name}</p>
+              <p className="repoVisibility">{repo.visibility}</p>
+              <br></br>
+              <p className="repoDescription">{repo.description}</p>
+            </div>
+            <p className="repoIssues">{repo.open_issues} Issue(s)</p>
+          </div>
+        ))}
     </div>
   );
 }
