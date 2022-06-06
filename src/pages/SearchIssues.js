@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../components/Nav";
 import IssueCards from "../components/IssueCards";
+import Disclaimer from "../components/Disclaimer";
 
 function SearchIssues() {
   // Use State to define the Single Repository for display
@@ -102,7 +103,14 @@ function SearchIssues() {
         <p>Loading...</p>
       )}
 
-      {repoIssues ? <IssueCards issues={repoIssues} /> : <p>Loading...</p>}
+      {repoIssues ? (
+        <>
+          {" "}
+          <IssueCards issues={repoIssues} /> <Disclaimer />
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Disclaimer from "../Disclaimer";
 
 function SearchResults({ results }) {
   return (
@@ -21,6 +22,7 @@ function SearchResults({ results }) {
             </p>
           </div>
         ))}
+      <Disclaimer />
     </div>
   );
 }

@@ -12,6 +12,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.disclaimer {
+  color: #595959;
+  width: 70%;
+  margin: auto;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.disclaimer a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.disclaimer a:hover {
+  text-decoration: underline;
+}
 
 /* Styles to the Homepage */
 .info-text {
