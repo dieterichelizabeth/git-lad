@@ -296,6 +296,11 @@ header {
 
 .issues-repository-name {
   color: #4285f4;
+  text-decoration: none;
+}
+
+.issues-repository-name:hover {
+  text-decoration: underline;
 }
 
 .issues-description {
