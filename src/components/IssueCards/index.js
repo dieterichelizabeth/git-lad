@@ -1,35 +1,48 @@
 import React from "react";
 
-function IssueCards() {
+function IssueCards({ issues }) {
+  if (!issues[0]) {
+    return <p className="noIssues">This Repository has no issues!</p>;
+  }
+
   return (
     <div className="issues-cards-container">
       {" "}
-      {/* card #1 */}
-      <div className="issueCards">
-        <div className="repoInfo">
-          <a href={`/search/issues/`} className="issueName">
-            "Implement user-based mutations"
-          </a>
+      {issues &&
+        issues.map((issue, index) => (
+          <div className="issueCards" key={index}>
+            <div className="repoInfo">
+              <a href={`/search/issues/`} className="issueName">
+                {issue.title}
+              </a>
 
-          <br></br>
-          <p className="issue-card-date">Created by: dieterichelizabeth</p>
-          <p className="repoDescription">2022-05-09</p>
-        </div>
-        <button className="issue-card-button">Issue</button>
-      </div>
-      {/* card #2 */}
-      <div className="issueCards">
-        <div className="repoInfo">
-          <a href={`/search/issues/`} className="issueName">
-            "Implement user-based mutations"
-          </a>
-
-          <br></br>
-          <p className="issue-card-date">Created by: dieterichelizabeth</p>
-          <p className="repoDescription">2022-05-09</p>
-        </div>
-        <button className="pullRequest-card-button">Pull Request</button>
-      </div>
+              <br></br>
+              <p className="issue-card-date">Created by: {issue.user.login}</p>
+              <p className="repoDescription">{issue.created_at}</p>
+            </div>
+            {issue.pull_request ? (
+              <button className="pullRequest-card-button">
+                <a
+                  href={issue.html_url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Pull Request
+                </a>
+              </button>
+            ) : (
+              <button className="issue-card-button">
+                <a
+                  href={issue.html_url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Issue
+                </a>
+              </button>
+            )}
+          </div>
+        ))}
     </div>
   );
 }

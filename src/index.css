@@ -266,7 +266,6 @@ header {
 
 /* Styles to Repository Search Single Repo Issues Results */
 .back-button {
-  color: #595959;
   font-size: 15px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
@@ -282,6 +281,11 @@ header {
 .back-button:hover {
   transform: scale(1.1);
   background-color: #c8bbf71c;
+}
+
+.back-button a {
+  color: #595959;
+  text-decoration: none;
 }
 
 .issues-info-container {
@@ -373,7 +377,6 @@ hr {
 }
 
 .issue-card-button {
-  color: white;
   font-size: 15px;
   background: rgb(60, 120, 216);
   background: linear-gradient(
@@ -397,6 +400,12 @@ hr {
     rgba(60, 120, 216, 0.926500822368421) 100%
   );
   transform: scale(1.1);
+}
+
+.issue-card-button a,
+.pullRequest-card-button a {
+  color: white;
+  text-decoration: none;
 }
 
 .pullRequest-card-button {
@@ -424,4 +433,9 @@ hr {
     rgba(255, 0, 255, 1) 100%
   );
   transform: scale(1.1);
+}
+
+.noIssues {
+  text-align: center;
+  color: white;
 }

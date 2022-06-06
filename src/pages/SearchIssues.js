@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import SearchResults from "../components/SearchResults";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import IssueCards from "../components/IssueCards";
@@ -13,25 +12,28 @@ function SearchIssues() {
 
   useEffect(() => {
     handleRepoSearch(repoName);
+    handleIssueSearch(repoName);
   }, []);
 
-  //   let apiUrl =
-  //     "https://api.github.com/repos/" + repoName + "/issues?direction=asc";
+  const handleIssueSearch = async (repoName) => {
+    let apiUrl =
+      "https://api.github.com/repos/" + repoName + "/issues?direction=asc";
 
-  //   fetch(apiUrl)
-  //     .then(function (res) {
-  //       if (res.ok) {
-  //         res.json().then((json) => {
-  //           console.log(json);
-  //         });
-  //       } else {
-  //         alert("Error: GitHub User Not Found");
-  //       }
-  //     })
+    fetch(apiUrl)
+      .then(function (res) {
+        if (res.ok) {
+          res.json().then((json) => {
+            setRepoIssues(json);
+          });
+        } else {
+          alert("Error: GitHub User Not Found");
+        }
+      })
 
-  //     .catch(function (error) {
-  //       alert("Unable to connect to GitHub");
-  //     });
+      .catch(function (error) {
+        alert("Unable to connect to GitHub");
+      });
+  };
 
   const handleRepoSearch = async (repoName) => {
     let apiUrl = "https://api.github.com/repos/" + repoName;
@@ -40,7 +42,6 @@ function SearchIssues() {
       .then(function (res) {
         if (res.ok) {
           res.json().then((json) => {
-            console.log(json);
             setRepoInfo(json);
           });
         } else {
@@ -56,8 +57,8 @@ function SearchIssues() {
   return (
     <>
       <Nav />
-      <button href={"/search"} className="back-button">
-        Back to Search
+      <button className="back-button">
+        <a href={"/search"}>Back to Search</a>
       </button>
 
       {repoInfo ? (
@@ -78,10 +79,8 @@ function SearchIssues() {
             </h1>
             <p className="issues-description">{repoInfo.description}</p>
             <p className="issues-dates">Created at: {repoInfo.created_at}</p>
-            {repoInfo.created_at ? (
-              <p className="issues-dates">
-                Published at: {repoInfo.created_at}
-              </p>
+            {repoInfo.pushed_at ? (
+              <p className="issues-dates">Published at: {repoInfo.pushed_at}</p>
             ) : (
               <></>
             )}
