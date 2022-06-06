@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SearchResults from "../components/SearchResults";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 
 function SearchPage() {
   const [formState, setFormState] = useState("");
@@ -30,6 +29,29 @@ function SearchPage() {
       });
   };
 
+  const handleFeaturedSearch = (language) => {
+    let apiUrl =
+      "https://api.github.com/search/repositories?q=" +
+      language +
+      "+is:featured&sort=help-wanted-issues";
+
+    fetch(apiUrl)
+      .then(function (res) {
+        if (res.ok) {
+          res.json().then((json) => {
+            setSearchedRepos(json.items);
+            setsearchTerm(language);
+          });
+        } else {
+          alert("Error: GitHub User Not Found");
+        }
+      })
+
+      .catch(function (error) {
+        alert("Unable to connect to GitHub");
+      });
+  };
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
@@ -38,6 +60,11 @@ function SearchPage() {
     }
 
     handleSearchTerm(formState);
+  };
+
+  const handleButtonClick = (searchTerm) => {
+    console.log(searchTerm);
+    handleFeaturedSearch(searchTerm);
   };
 
   const userSearch = (
@@ -60,44 +87,49 @@ function SearchPage() {
     </div>
   );
 
-  // const languageSearch = (
-  //   <div className="search-type-div">
-  //     <p className="search-heading">Search for Repositories by Topic</p>
-  //     <div className="language-buttons">
-  //       <button className="lng-btn">HTML</button>
-  //       <button className="lng-btn">CSS</button>
-  //       <button className="lng-btn">JavaScript</button>
-  //       <button className="lng-btn">React.js</button>
-  //       <button className="lng-btn">MongoDb</button>
-  //       <button className="lng-btn">Python</button>
-  //     </div>
-  //   </div>
-  // );
-
-  // const repoSearch = (
-  //   <div className="search-type-div">
-  //     <p className="search-heading">Search for Repositories by Name</p>
-  //     <form id="repo-form">
-  //       <input
-  //         name="reponame"
-  //         id="reponame"
-  //         type="text"
-  //         autoFocus={true}
-  //         placeholder="Ex. blueberry-pie"
-  //         className="form-input"
-  //       />
-  //       <button type="submit" className="search-btn">
-  //         Search
-  //       </button>
-  //     </form>
-  //   </div>
-  // );
+  const languageSearch = (
+    <div className="search-type-div">
+      <p className="search-heading">Search for Repositories by Topic</p>
+      <div className="language-buttons">
+        <button className="lng-btn" onClick={() => handleButtonClick("HTML")}>
+          HTML
+        </button>
+        <button className="lng-btn" onClick={() => handleButtonClick("CSS")}>
+          CSS
+        </button>
+        <button
+          className="lng-btn"
+          onClick={() => handleButtonClick("JavsScript")}
+        >
+          JavaScript
+        </button>
+        <button
+          className="lng-btn"
+          onClick={() => handleButtonClick("React.js")}
+        >
+          React.js
+        </button>
+        <button
+          className="lng-btn"
+          onClick={() => handleButtonClick("MongoDb")}
+        >
+          MongoDb
+        </button>
+        <button className="lng-btn" onClick={() => handleButtonClick("Python")}>
+          Python
+        </button>
+      </div>
+    </div>
+  );
 
   return (
     <>
       <Nav />
       <div className="flex-display">
-        <div className="search-container">{userSearch}</div>
+        <div className="search-container">
+          {userSearch}
+          {languageSearch}
+        </div>
         <div className="search-results">
           <p className="result-heading">Results for: {searchTerm}</p>
           {searchedRepos ? (
@@ -124,7 +156,6 @@ function SearchPage() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

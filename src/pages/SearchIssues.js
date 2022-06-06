@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+
 import IssueCards from "../components/IssueCards";
 
 function SearchIssues() {
@@ -94,8 +94,6 @@ function SearchIssues() {
       )}
 
       {repoIssues ? <IssueCards issues={repoIssues} /> : <p>Loading...</p>}
-
-      <Footer />
     </>
   );
 }

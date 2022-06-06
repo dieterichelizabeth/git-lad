@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import IntroText from "../components/IntroText";
 
@@ -8,7 +7,6 @@ function Home() {
     <div>
       <Nav />
       <IntroText />
-      <Footer />
     </div>
   );
 }
