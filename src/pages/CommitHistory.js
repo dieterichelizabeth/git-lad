@@ -1,4 +1,6 @@
 import React from "react";
+import Nav from "../components/Nav";
+import logo from "../icons8-github.svg";
 
 function CommitHistory() {
   // const repoSearch = (
@@ -19,7 +21,16 @@ function CommitHistory() {
   //     </form>
   //   </div>
   // );
-  return <div>This will be the commit page</div>;
+  return (
+    <>
+      <Nav />
+      <header className="App-header App">
+        <img src={logo} className="App-logo" alt="logo" />
+
+        <p className="margin0">...Coming soon....</p>
+      </header>
+    </>
+  );
 }
 
 export default CommitHistory;

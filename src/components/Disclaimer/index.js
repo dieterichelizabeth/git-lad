@@ -11,7 +11,7 @@ function Disclaimer() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        see this resource for more information
+        see this resource for more information.
       </a>
     </p>
   );
