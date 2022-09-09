@@ -11,11 +11,11 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/search" element={<SearchPage />} />
+          <Route path="/GitLad/" element={<Welcome />} />
+          <Route path="/GitLad/home" element={<Home />} />
+          <Route path="/GitLad/search" element={<SearchPage />} />
           <Route
-            path="/search/issues/:username/:repoName"
+            path="/GitLad/search/issues/:username/:repoName"
             element={<SearchIssues />}
           />
         </Routes>

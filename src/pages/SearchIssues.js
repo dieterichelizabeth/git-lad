@@ -13,7 +13,7 @@ function SearchIssues() {
   // This link was created in the SearchResults component line 10 from the fetch on the Search Page
   // expected example: /octocat/git-consortium
   let searchTerms = window.location.href.split("/");
-  let repoName = `${searchTerms[5]}/${searchTerms[6]}`;
+  let repoName = `${searchTerms[6]}/${searchTerms[7]}`;
 
   // Use Effect to fetch the repository's information, as well as it's issues ONCE
   useEffect(() => {
@@ -68,7 +68,7 @@ function SearchIssues() {
     <>
       <Nav />
       <button className="back-button">
-        <a href={"/search"}>Back to Search</a>
+        <a href={"/GitLad/search"}>Back to Search</a>
       </button>
 
       {repoInfo ? (
