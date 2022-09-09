@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/GitLad/static/css/main.37068089.css",
-    "main.js": "/GitLad/static/js/main.5f123493.js",
-    "static/js/787.61054089.chunk.js": "/GitLad/static/js/787.61054089.chunk.js",
-    "static/media/background.jpeg": "/GitLad/static/media/background.52980905c193b28fa173.jpeg",
-    "static/media/icons8-github.svg": "/GitLad/static/media/icons8-github.895050b20cdc3aefa3177ef8508b789b.svg",
-    "index.html": "/GitLad/index.html",
-    "main.37068089.css.map": "/GitLad/static/css/main.37068089.css.map",
-    "main.5f123493.js.map": "/GitLad/static/js/main.5f123493.js.map",
-    "787.61054089.chunk.js.map": "/GitLad/static/js/787.61054089.chunk.js.map"
+    "main.css": "./static/css/main.b988908c.css",
+    "main.js": "./static/js/main.ba06dd03.js",
+    "static/js/787.61054089.chunk.js": "./static/js/787.61054089.chunk.js",
+    "static/media/background.jpeg": "./static/media/background.52980905c193b28fa173.jpeg",
+    "static/media/icons8-github.svg": "./static/media/icons8-github.895050b20cdc3aefa3177ef8508b789b.svg",
+    "index.html": "./index.html",
+    "main.b988908c.css.map": "./static/css/main.b988908c.css.map",
+    "main.ba06dd03.js.map": "./static/js/main.ba06dd03.js.map",
+    "787.61054089.chunk.js.map": "./static/js/787.61054089.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37068089.css",
-    "static/js/main.5f123493.js"
+    "static/css/main.b988908c.css",
+    "static/js/main.ba06dd03.js"
   ]
 }
