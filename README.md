@@ -14,8 +14,6 @@ Currently, this application will only display 30 results per search as it is Git
 
 This project offers the ability to search for open issues by language. Language based searches will return featured repositories based on the language, as well as their open issues count, for those who would like to search for open source projects to contribute to. At present, the term "JavaScript" will not return many repositories with open issues- I have left more information below if you would like to change the language buttons for personalized use after cloning the repo.
 
-Commit History functionality is in the works...
-
 ## Screenshots
 
 Welcome Page

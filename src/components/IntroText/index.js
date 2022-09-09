@@ -9,7 +9,7 @@ function IntroText() {
         <li>🛸language</li>
         <li>💫repository name</li>
       </ul>
-      <p>You can also view the commit history of a repository</p>
+
       <p>
         This project uses{" "}
         <span>
@@ -25,8 +25,7 @@ function IntroText() {
       </p>
       <p>
         To get started, Click on the “Search for Repository” option in the nav
-        bar to view open issues, or View Commit History to search for a repo and
-        it’s commits!
+        bar to view open issues!
       </p>
     </div>
   );

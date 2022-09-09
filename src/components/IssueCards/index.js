@@ -12,7 +12,7 @@ function IssueCards({ issues }) {
         issues.map((issue, index) => (
           <div className="issueCards" key={index}>
             <div className="repoInfo">
-              <a href={`/search/issues/`} className="issueName">
+              <a href={issue.html_url} className="issueName">
                 {issue.title}
               </a>
 

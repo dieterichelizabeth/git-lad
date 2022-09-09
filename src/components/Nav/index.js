@@ -2,10 +2,7 @@ import React from "react";
 
 function Nav() {
   // Nav Links
-  const navLinks = [
-    { name: "Search For Repository", href: "/search" },
-    { name: "View Commit History", href: "/commits" },
-  ];
+  const navLinks = [{ name: "Search For Repository", href: "/search" }];
 
   return (
     <div>
