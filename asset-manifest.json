@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/git-lad/static/css/main.01575d38.css",
-    "main.js": "/git-lad/static/js/main.705cf52a.js",
+    "main.css": "/git-lad/static/css/main.6c3f09d5.css",
+    "main.js": "/git-lad/static/js/main.10157453.js",
     "static/js/787.61054089.chunk.js": "/git-lad/static/js/787.61054089.chunk.js",
     "static/media/background.jpeg": "/git-lad/static/media/background.52980905c193b28fa173.jpeg",
     "static/media/icons8-github.svg": "/git-lad/static/media/icons8-github.895050b20cdc3aefa3177ef8508b789b.svg",
     "index.html": "/git-lad/index.html",
-    "main.01575d38.css.map": "/git-lad/static/css/main.01575d38.css.map",
-    "main.705cf52a.js.map": "/git-lad/static/js/main.705cf52a.js.map",
+    "main.6c3f09d5.css.map": "/git-lad/static/css/main.6c3f09d5.css.map",
+    "main.10157453.js.map": "/git-lad/static/js/main.10157453.js.map",
     "787.61054089.chunk.js.map": "/git-lad/static/js/787.61054089.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01575d38.css",
-    "static/js/main.705cf52a.js"
+    "static/css/main.6c3f09d5.css",
+    "static/js/main.10157453.js"
   ]
 }
