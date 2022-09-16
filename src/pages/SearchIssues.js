@@ -68,7 +68,7 @@ function SearchIssues() {
     <>
       <Nav />
       <button className="back-button">
-        <a href={"/git-lad/search"}>Back to Search</a>
+        <a href={"/search"}>Back to Search</a>
       </button>
 
       {repoInfo ? (

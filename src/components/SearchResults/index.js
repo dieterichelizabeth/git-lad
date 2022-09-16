@@ -8,10 +8,7 @@ function SearchResults({ results }) {
         results.map((repo) => (
           <div className="repoCards" key={repo.full_name}>
             <div className="repoInfo">
-              <a
-                href={`/git-lad/search/issues/${repo.full_name}`}
-                className="repoName"
-              >
+              <a href={`/search/issues/${repo.full_name}`} className="repoName">
                 {repo.full_name}
               </a>
               <p className="repoVisibility">{repo.visibility}</p>
