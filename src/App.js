@@ -1,26 +1,29 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import "./App.css";
 import Welcome from "./pages/welcome";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import SearchPage from "./pages/Search";
 import SearchIssues from "./pages/SearchIssues";
 
 function App() {
   return (
-    <div>
+    <>
       <Router>
         <Routes>
-          <Route path="/GitLad/" element={<Welcome />} />
-          <Route path="/GitLad/home" element={<Home />} />
-          <Route path="/GitLad/search" element={<SearchPage />} />
+          <Route path="/" element={<Welcome />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route
-            path="/GitLad/search/issues/:username/:repoName"
+            path="/search/issues/:username/:repoName"
             element={<SearchIssues />}
           />
+
+          <Route path="*" element={<Welcome />} />
         </Routes>
       </Router>
-    </div>
+    </>
   );
 }
 
