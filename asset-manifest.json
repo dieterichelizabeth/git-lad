@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.b988908c.css",
-    "main.js": "./static/js/main.ba06dd03.js",
-    "static/js/787.61054089.chunk.js": "./static/js/787.61054089.chunk.js",
-    "static/media/background.jpeg": "./static/media/background.52980905c193b28fa173.jpeg",
-    "static/media/icons8-github.svg": "./static/media/icons8-github.895050b20cdc3aefa3177ef8508b789b.svg",
-    "index.html": "./index.html",
-    "main.b988908c.css.map": "./static/css/main.b988908c.css.map",
-    "main.ba06dd03.js.map": "./static/js/main.ba06dd03.js.map",
-    "787.61054089.chunk.js.map": "./static/js/787.61054089.chunk.js.map"
+    "main.css": "/git-lad/static/css/main.01575d38.css",
+    "main.js": "/git-lad/static/js/main.3cd8c0f9.js",
+    "static/js/787.61054089.chunk.js": "/git-lad/static/js/787.61054089.chunk.js",
+    "static/media/background.jpeg": "/git-lad/static/media/background.52980905c193b28fa173.jpeg",
+    "static/media/icons8-github.svg": "/git-lad/static/media/icons8-github.895050b20cdc3aefa3177ef8508b789b.svg",
+    "index.html": "/git-lad/index.html",
+    "main.01575d38.css.map": "/git-lad/static/css/main.01575d38.css.map",
+    "main.3cd8c0f9.js.map": "/git-lad/static/js/main.3cd8c0f9.js.map",
+    "787.61054089.chunk.js.map": "/git-lad/static/js/787.61054089.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b988908c.css",
-    "static/js/main.ba06dd03.js"
+    "static/css/main.01575d38.css",
+    "static/js/main.3cd8c0f9.js"
   ]
 }
