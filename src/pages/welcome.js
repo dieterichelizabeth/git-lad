@@ -14,7 +14,7 @@ function Welcome() {
           Search for Repositories Issues or Commit History
         </p>
         <button className="purpleToPink">
-          <a href="/search"> Get Started </a>
+          <a href="/git-lad/search"> Get Started </a>
         </button>
       </header>
       <WelcomeFooter />

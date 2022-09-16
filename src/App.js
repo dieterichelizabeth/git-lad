@@ -10,7 +10,7 @@ import SearchIssues from "./pages/SearchIssues";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/git-lad">
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
