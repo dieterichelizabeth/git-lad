@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Nav from "../components/Nav";
-import IssueCards from "../components/IssueCards";
-import Disclaimer from "../components/Disclaimer";
+import IssueCards from "../IssueCards";
+import Disclaimer from "../Disclaimer";
 
-function SearchIssues() {
+function SearchIssues({ repoName }) {
   // Use State to define the Single Repository for display
   // Once RepoIssues is updated with json from Github's API, that information is passed to the IssueCards component
   const [repoInfo, setRepoInfo] = useState("");
   const [repoIssues, setRepoIssues] = useState("");
-
-  // Get the full repository name from the window location
-  // This link was created in the SearchResults component line 10 from the fetch on the Search Page
-  // expected example: /octocat/git-consortium
-  let searchTerms = window.location.href.split("/");
-  let repoName = `${searchTerms[6]}/${searchTerms[7]}`;
 
   // Use Effect to fetch the repository's information, as well as it's issues ONCE
   useEffect(() => {
     handleRepoSearch(repoName);
     handleIssueSearch(repoName);
   }, []);
+
+  const reload = () => window.location.reload();
 
   // Fetch the Issues for the repository from Github's API
   // If the fetch is okay, update the repoIssues State
@@ -66,9 +61,13 @@ function SearchIssues() {
 
   return (
     <>
-      <Nav />
-      <button className="back-button">
-        <a href={"/search"}>Back to Search</a>
+      <button
+        className="back-button"
+        onClick={() => {
+          reload();
+        }}
+      >
+        Back to Search
       </button>
 
       {repoInfo ? (
@@ -105,7 +104,6 @@ function SearchIssues() {
 
       {repoIssues ? (
         <>
-          {" "}
           <IssueCards issues={repoIssues} /> <Disclaimer />
         </>
       ) : (

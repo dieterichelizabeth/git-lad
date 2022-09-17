@@ -12,6 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .disclaimer {
   color: #595959;
   width: 70%;
@@ -183,12 +184,18 @@ code {
 }
 
 .result-info {
+  padding-bottom: 50px;
+  background-image: url(/src/images/background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   width: 80%;
   margin: auto;
   font-size: 20px;
-  color: #625d5d;
+  color: #8d8787;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 /* Styles to the Footer */
@@ -289,16 +296,13 @@ code {
   margin-top: 20px;
   margin-left: 20px;
   transition: all 0.2s ease-in-out;
+  color: #595959;
+  text-decoration: none;
 }
 
 .back-button:hover {
   transform: scale(1.1);
   background-color: #c8bbf71c;
-}
-
-.back-button a {
-  color: #595959;
-  text-decoration: none;
 }
 
 .issues-info-container {
