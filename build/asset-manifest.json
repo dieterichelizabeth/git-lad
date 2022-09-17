@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/git-lad/static/css/main.8ef39322.css",
+    "main.js": "/git-lad/static/js/main.2765b30f.js",
+    "static/js/787.61054089.chunk.js": "/git-lad/static/js/787.61054089.chunk.js",
+    "static/media/background.jpeg": "/git-lad/static/media/background.52980905c193b28fa173.jpeg",
+    "index.html": "/git-lad/index.html",
+    "main.8ef39322.css.map": "/git-lad/static/css/main.8ef39322.css.map",
+    "main.2765b30f.js.map": "/git-lad/static/js/main.2765b30f.js.map",
+    "787.61054089.chunk.js.map": "/git-lad/static/js/787.61054089.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ef39322.css",
+    "static/js/main.2765b30f.js"
+  ]
+}

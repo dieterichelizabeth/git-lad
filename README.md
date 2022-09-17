@@ -2,9 +2,11 @@
 
 A tool for viewing your repos and commit history 🦉
 
-Gitlad is a project built for managing personal repositories and their issues. This project's design is HEAVILY inspired by Github Skyline and Github itself.
+Gitlad is a project built for managing personal repositories and their issues. This project's design is inspired by Github itself.
 
 Important: This is a view only tool. This project was not meant to be a place where users can update their repository information within the applicaiton- and is not set to connect to Github's OAth authorizations API. There are several links provided by within this app's search results which send you back to Github itself if you wish to modify your repositories.
+
+[View the Application](https://dieterichelizabeth.github.io/git-lad/)
 
 ## About
 
@@ -35,7 +37,7 @@ This project requires Node.js- [here is a resouce to get started](https://nodejs
 1. Clone the Repo
 
 ```bash
-git clone https://github.com/dieterichelizabeth/GitLad.git
+git clone https://github.com/dieterichelizabeth/git-lad.git
 ```
 
 2. Install the dependencies
